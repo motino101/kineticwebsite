@@ -108,7 +108,7 @@ export default function Home() {
       <motion.div 
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        className="fixed top-8 left-1/2 transform -translate-x-1/2 z-50"
+        className="absolute top-8 left-1/2 transform -translate-x-1/2 z-50"
       >
         <span className="font-syne text-3xl" style={{ fontWeight: 900 }}>
           kinetic
@@ -116,7 +116,7 @@ export default function Home() {
       </motion.div>
 
       {/* Theme Toggle */}
-      <div className="fixed top-4 right-4 z-50">
+      <div className="absolute top-4 right-4 z-50">
         <button
           onClick={toggleTheme}
           className="p-2 rounded-full transition-colors duration-200 hover:bg-gray-200 dark:hover:bg-gray-800"
@@ -299,35 +299,6 @@ export default function Home() {
             
           </div>
           <div className="bg-white rounded-lg mt-20 h-80 mb-6 hover:shadow-lg transition-shadow duration-300"></div>
-          <motion.div
-            initial={{ opacity: 0, y: -10 }}
-            animate={{ 
-              opacity: 1,
-              y: [0, 10, 0],
-              transition: {
-                y: {
-                  repeat: Infinity,
-                  duration: 2,
-                  ease: "easeInOut"
-                }
-              }
-            }}
-            className="text-gray-600 dark:text-gray-300 flex justify-center mt-8 sm:mt-12"
-          >
-            <svg 
-              width="40" 
-              height="40" 
-              viewBox="0 0 24 24" 
-              fill="none" 
-              stroke="currentColor" 
-              strokeWidth="2" 
-              strokeLinecap="round" 
-              strokeLinejoin="round"
-              className="animate-bounce"
-            >
-              <path d="M12 5v14M5 12l7 7 7-7M12 8a4 4 0 1 0 0 8 4 4 0 0 0 0-8z" strokeLinecap="round" strokeLinejoin="round"/>
-            </svg>
-          </motion.div>
           
         </motion.div>
       </div>
@@ -335,6 +306,7 @@ export default function Home() {
       {/* Steps Section */}
       <section className="py-16 bg-black text-white w-full">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="border-t border-gray-300 mt-8 mb-32 opacity-50 w-full"></div>
           <h1 className="text-[60px] font-syne text-center leading-tight mb-20" style={{ fontWeight: 600 }}>
             Introducing, Kinetic.
           </h1>
@@ -345,23 +317,20 @@ export default function Home() {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="text-center hover:scale-105 transition-transform duration-300"
             >
-              <div className="text-gray-400 font-bold text-lg mb-4">01</div>
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8 }}
-                className="bg-white rounded-lg h-32 mb-6 hover:shadow-lg transition-shadow duration-300"
+                className="rounded-lg mb-10 hover:shadow-lg transition-shadow duration-300 flex justify-center"
+                style={{ width: 'auto', height: 'auto' }}
                 whileHover={{ scale: 1.05 }}
               >
                 <Image
-                  src="/image1.png"
-                  width={100}
-                  height={100}
+                  src="/images/step1.jpg"
+                  width={500}
+                  height={500}
                   alt="Upload your b-roll"
-                  className="object-cover w-full h-full rounded-lg"
+                  className="rounded-lg"
                 />
               </motion.div>
-              <h5 className="font-syne font-semibold text-2xl mt-4" style={{ fontWeight: 600, fontSize: '24px' }}>Upload your b-roll.</h5>
+              <h5 className="font-syne font-semibold text-2xl mt-4" style={{ fontWeight: 600, fontSize: '24px' }}>01. Upload your b-roll.</h5>
               <p className="text-sm mt-2 text-gray-400" style={{ fontFamily: 'DM Sans', fontWeight: 500, fontSize: '16px', lineHeight: '160%' }}>Upload your video snippets from b-roll footage or past content.</p>
             </motion.div>
             <motion.div
@@ -370,12 +339,20 @@ export default function Home() {
               transition={{ duration: 0.5, delay: 0.4 }}
               className="text-center hover:scale-105 transition-transform duration-300"
             >
-              <div className="text-gray-400 font-bold text-lg mb-4">02</div>
               <motion.div
-                className="bg-white rounded-lg h-32 mb-6 hover:shadow-lg transition-shadow duration-300"
+                className="rounded-lg mb-10 hover:shadow-lg transition-shadow duration-300 flex justify-center"
+                style={{ width: 'auto', height: 'auto' }}
                 whileHover={{ scale: 1.05 }}
-              />
-              <h5 className="font-syne font-semibold text-2xl mt-4" style={{ fontWeight: 600, fontSize: '24px' }}>Find your story.</h5>
+              >
+                <Image
+                  src="/images/step2.jpg"
+                  width={500}
+                  height={500}
+                  alt="Find your story"
+                  className="rounded-lg"
+                />
+              </motion.div>
+              <h5 className="font-syne font-semibold text-2xl mt-4" style={{ fontWeight: 600, fontSize: '24px' }}>02. Find your story.</h5>
               <p className="text-sm mt-2 text-gray-400" style={{ fontFamily: 'DM Sans', fontWeight: 500, fontSize: '16px', lineHeight: '160%' }}>Storycraft suggests video narratives and captioning based on your brand's content and engagement trends.</p>
             </motion.div>
           </div>
@@ -386,12 +363,20 @@ export default function Home() {
               transition={{ duration: 0.5, delay: 0.6 }}
               className="text-center hover:scale-105 transition-transform duration-300"
             >
-              <div className="text-gray-400 font-bold text-lg mb-4">03</div>
               <motion.div
-                className="bg-white rounded-lg h-32 mb-6 hover:shadow-lg transition-shadow duration-300"
+                className="rounded-lg mb-10 hover:shadow-lg transition-shadow duration-300 flex justify-center"
+                style={{ width: 'auto', height: 'auto' }}
                 whileHover={{ scale: 1.05 }}
-              />
-              <h5 className="font-syne font-semibold text-2xl mt-4" style={{ fontWeight: 600, fontSize: '24px' }}>Cut, order, caption.</h5>
+              >
+                <Image
+                  src="/images/step3.jpg"
+                  width={500}
+                  height={500}
+                  alt="Cut, order, caption"
+                  className="rounded-lg"
+                />
+              </motion.div>
+              <h5 className="font-syne font-semibold text-2xl mt-4" style={{ fontWeight: 600, fontSize: '24px' }}>03. Cut, order, caption.</h5>
               <p className="text-sm mt-2 text-gray-400" style={{ fontFamily: 'DM Sans', fontWeight: 500, fontSize: '16px', lineHeight: '160%' }}>We help you create a video sequence and caption, automatically structured for flow.</p>
             </motion.div>
             <motion.div
@@ -400,20 +385,28 @@ export default function Home() {
               transition={{ duration: 0.5, delay: 0.8 }}
               className="text-center hover:scale-105 transition-transform duration-300"
             >
-              <div className="text-gray-400 font-bold text-lg mb-4">04</div>
               <motion.div
-                className="bg-white rounded-lg h-32 mb-6 hover:shadow-lg transition-shadow duration-300"
+                className="rounded-lg mb-10 hover:shadow-lg transition-shadow duration-300 flex justify-center"
+                style={{ width: 'auto', height: 'auto' }}
                 whileHover={{ scale: 1.05 }}
-              />
-              <h5 className="font-syne font-semibold text-2xl mt-4" style={{ fontWeight: 600, fontSize: '24px' }}>Make it shine.</h5>
+              >
+                <Image
+                  src="/images/step4.jpg"
+                  width={500}
+                  height={500}
+                  alt="Make it shine"
+                  className="rounded-lg"
+                />
+              </motion.div>
+              <h5 className="font-syne font-semibold text-2xl mt-4" style={{ fontWeight: 600, fontSize: '24px' }}>04. Make it shine.</h5>
               <p className="text-sm mt-2 text-gray-400" style={{ fontFamily: 'DM Sans', fontWeight: 500, fontSize: '16px', lineHeight: '160%' }}>Our AI helps you add styles to match reference videos, or your own brand style.</p>
             </motion.div>
           </div>
         </div>
       </section>
-
-      {/* Early Access Section */}
+      
       <section className="py-16 bg-black text-white text-center">
+      <div className="border-t border-gray-300 my-16 opacity-50 w-full"></div>
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h1 className="text-[60px] font-syne mb-8" style={{ fontWeight: 600 }}>
             Get Early Access
@@ -428,7 +421,7 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-transparent py-8">
+      <footer className="bg-transparent py-8 py-16">
         <div className="container mx-auto text-center text-gray-400 font-syne space-y-4">
           {/* <motion.hr className="border-gray-400 mb-4" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1 }} /> */}
           <motion.p className="text-sm cursor-pointer hover:text-gray-300" whileHover={{ scale: 1.05 }}>
