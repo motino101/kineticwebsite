@@ -11,6 +11,17 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        subtitle: "#c0c0c0",
+      },
+      fontSize: {
+        subtitle: '18px',
+        button: '18px',
+      },
+      fontFamily: {
+        syne: ['Syne', 'sans-serif'],
+      },
+      fontWeight: {
+        semibold: 600,
       },
     },
   },
