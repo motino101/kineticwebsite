@@ -137,7 +137,7 @@ export default function Home() {
             initial={{ opacity: 0, x: -100, y: -50 }}
             animate={{ opacity: 1, x: 0, y: 0 }}
             transition={{ duration: 2 }}
-            className="absolute top-[20%] left-[8%] w-[160px] xl:w-[200px]"
+            className="absolute top-[20%] left-[8%] w-[200px] xl:w-[250px]"
           >
             <motion.div
               className="rounded-lg mb-10 hover:shadow-lg transition-shadow duration-300 flex justify-center"
@@ -145,12 +145,11 @@ export default function Home() {
               whileHover={{ scale: 1.05 }}
             >
               <Image
-                src="/home/Screenshot 2025-02-01 at 10.20.27.avif"
-                alt="Interactive 1"
-                width={200}
-                height={150}
+                src="/home/ex1.png"
+                alt="Interactive Image 1"
+                width={250}
+                height={200}
                 className="rounded-lg shadow-xl cursor-pointer pointer-events-auto hover:scale-105 transition-transform w-full h-auto"
-                onClick={() => window.open('/work/spatial', '_self')}
               />
             </motion.div>
           </motion.div>
@@ -160,7 +159,7 @@ export default function Home() {
             initial={{ opacity: 0, x: 100, y: -50 }}
             animate={{ opacity: 1, x: 0, y: 0 }}
             transition={{ duration: 2 }}
-            className="absolute top-[15%] right-[8%] w-[140px] xl:w-[180px]"
+            className="absolute top-[15%] right-[8%] w-[180px] xl:w-[230px]"
           >
             <motion.div
               className="rounded-lg mb-10 hover:shadow-lg transition-shadow duration-300 flex justify-center"
@@ -168,12 +167,11 @@ export default function Home() {
               whileHover={{ scale: 1.05 }}
             >
               <Image
-                src="/home/Screenshot 2025-02-01 at 10.20.32.avif"
-                alt="Interactive 2"
-                width={180}
-                height={130}
+                src="/home/ex2.png"
+                alt="Interactive Image 2"
+                width={230}
+                height={180}
                 className="rounded-lg shadow-xl cursor-pointer pointer-events-auto hover:scale-105 transition-transform w-full h-auto"
-                onClick={() => window.open('/work/between-worlds', '_self')}
               />
             </motion.div>
           </motion.div>
@@ -183,7 +181,7 @@ export default function Home() {
             initial={{ opacity: 0, x: -100, y: 50 }}
             animate={{ opacity: 1, x: 0, y: 0 }}
             transition={{ duration: 2 }}
-            className="absolute bottom-[25%] left-[12%] w-[120px] xl:w-[160px]"
+            className="absolute bottom-[25%] left-[12%] w-[150px] xl:w-[200px]"
           >
             <motion.div
               className="rounded-lg mb-10 hover:shadow-lg transition-shadow duration-300 flex justify-center"
@@ -191,22 +189,21 @@ export default function Home() {
               whileHover={{ scale: 1.05 }}
             >
               <Image
-                src="/home/Screenshot 2025-02-01 at 10.20.35.avif"
-                alt="Interactive 3"
-                width={160}
-                height={120}
+                src="/home/ex3.png"
+                alt="Interactive Image 3"
+                width={200}
+                height={150}
                 className="rounded-lg shadow-xl cursor-pointer pointer-events-auto hover:scale-105 transition-transform w-full h-auto"
-                onClick={() => window.open('/work/runewars', '_self')}
               />
             </motion.div>
           </motion.div>
 
           {/* Bottom Right */}
           <motion.div
-            initial={{ opacity: 0, x: 100, y: 50 }}
-            animate={{ opacity: 1, x: 0, y: 0 }}
+            initial={{ opacity: 0, x: 120, y: 50 }}
+            animate={{ opacity: 1, x: 20, y: 0 }}
             transition={{ duration: 2 }}
-            className="absolute bottom-[20%] right-[12%] w-[180px] xl:w-[220px]"
+            className="absolute bottom-[20%] right-[10%] w-[220px] xl:w-[270px]"
           >
             <motion.div
               className="rounded-lg mb-10 hover:shadow-lg transition-shadow duration-300 flex justify-center"
@@ -214,12 +211,11 @@ export default function Home() {
               whileHover={{ scale: 1.05 }}
             >
               <Image
-                src="/home/Screenshot 2025-02-01 at 10.20.48.avif"
-                alt="Interactive 4"
-                width={220}
-                height={165}
-                className="rounded-lg shadow-xl cursor-pointer pointer-events-auto hover:scale-105 transition-transform w-full h-auto"
-                onClick={() => window.open('/work/spotify', '_self')}
+                src="/home/ex4.png"
+                alt="Interactive Image 4"
+                width={270}
+                height={210}
+                className="rounded-lg shadow-xl cursor-pointer pointer-events-auto hover:scale-105 transition-transform w-full h-100"
               />
             </motion.div>
           </motion.div>
@@ -229,7 +225,7 @@ export default function Home() {
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 2 }}
-            className="absolute top-1/2 right-[5%] -translate-y-1/2 w-[120px] xl:w-[150px]"
+            className="absolute top-1/2 right-[5%] -translate-y-1/2 w-[150px] xl:w-[200px]"
           >
             <motion.div
               className="rounded-lg mb-10 hover:shadow-lg transition-shadow duration-300 flex justify-center"
@@ -237,12 +233,11 @@ export default function Home() {
               whileHover={{ scale: 1.05 }}
             >
               <Image
-                src="/home/Screenshot 2025-02-01 at 10.21.19.avif"
-                alt="Interactive 5"
-                width={150}
-                height={110}
+                src="/home/ex5.avif"
+                alt="Interactive Image 5"
+                width={200}
+                height={150}
                 className="rounded-lg shadow-xl cursor-pointer pointer-events-auto hover:scale-105 transition-transform w-full h-auto"
-                onClick={() => window.open('/work/echo', '_self')}
               />
             </motion.div>
           </motion.div>
@@ -252,7 +247,7 @@ export default function Home() {
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 2 }}
-            className="absolute top-1/2 left-[5%] -translate-y-1/2 w-[140px] xl:w-[170px]"
+            className="absolute top-1/2 left-[5%] -translate-y-1/2 w-[170px] xl:w-[220px]"
           >
             <motion.div
               className="rounded-lg mb-10 hover:shadow-lg transition-shadow duration-300 flex justify-center"
@@ -260,12 +255,11 @@ export default function Home() {
               whileHover={{ scale: 1.05 }}
             >
               <Image
-                src="/home/XVKquNxKCuPBBJfQPkDl1fPpc.avif"
-                alt="Interactive 6"
-                width={170}
-                height={125}
+                src="/home/ex6.webp"
+                alt="Interactive Image 6"
+                width={220}
+                height={170}
                 className="rounded-lg shadow-xl cursor-pointer pointer-events-auto hover:scale-105 transition-transform w-full h-auto"
-                onClick={() => window.open('/work/content-creator', '_self')}
               />
             </motion.div>
           </motion.div>
@@ -281,7 +275,7 @@ export default function Home() {
             initial={{ opacity: 0, y: -50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-[60px] mt-16 font-syne text-center leading-tight" style={{ fontWeight: 600 }}
+            className="text-[80px] mt-16 font-syne text-center leading-tight" style={{ fontWeight: 600 }}
           >
             The next-gen editing tool, <br /> <span className="italic">{text}</span>
           </motion.h1>
@@ -289,28 +283,21 @@ export default function Home() {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-center mt-4 mb-10 text-subtitle"
+            className="text-center mt-4 mb-10 text-2xl"
             style={{ fontFamily: 'DM Sans', fontWeight: 500 }}
           >
             Transform your scattered videos into compelling, platform-ready content in seconds. 
           </motion.h2>
-          <div className="flex justify-center mt-6 space-x-4">
+          <div className="flex justify-center mt-6">
             <button
-              className="bg-white text-black font-syne text-button py-2 px-6 rounded-full shadow-md hover:shadow-lg hover:scale-105 transition-transform duration-300"
+              className="bg-yellow-500 text-black font-syne text-xl py-3 px-8 rounded-full shadow-md hover:shadow-lg hover:scale-105 transition-transform duration-300"
               style={{ fontWeight: 600 }}
             >
               Join the waitlist
-              {/* <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <svg className="w-5 h-5 ml-2 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-              </svg> */}
+              </svg>
             </button>
-            <button
-              className="bg-transparent border-2 border-white text-white font-syne text-button py-2 px-6 rounded-full hover:bg-white hover:text-black hover:scale-105 transition-transform duration-300"
-              style={{ fontWeight: 600 }}
-            >
-              View demo
-            </button>
-            
           </div>
         </motion.div>
       </div>
@@ -337,14 +324,14 @@ export default function Home() {
               >
                 <Image
                   src="/images/step1.jpg"
-                  width={500}
-                  height={500}
+                  width={600}
+                  height={600}
                   alt="Upload your b-roll"
                   className="rounded-lg"
                 />
               </motion.div>
-              <h5 className="font-syne font-semibold text-2xl mt-4" style={{ fontWeight: 600, fontSize: '24px' }}>01. Upload your b-roll.</h5>
-              <p className="text-sm mt-2 text-gray-400" style={{ fontFamily: 'DM Sans', fontWeight: 500, fontSize: '16px', lineHeight: '160%' }}>Upload your video snippets from b-roll footage or past content.</p>
+              <h5 className="font-syne font-semibold text-3xl mt-4" style={{ fontWeight: 600, fontSize: '30px' }}>01. Upload your b-roll.</h5>
+              <p className="text-lg mt-2 text-gray-400" style={{ fontFamily: 'DM Sans', fontWeight: 500, fontSize: '20px', lineHeight: '160%' }}>Upload your video snippets from b-roll footage or past content.</p>
             </motion.div>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -359,14 +346,14 @@ export default function Home() {
               >
                 <Image
                   src="/images/step2.jpg"
-                  width={500}
-                  height={500}
+                  width={600}
+                  height={600}
                   alt="Find your story"
                   className="rounded-lg"
                 />
               </motion.div>
-              <h5 className="font-syne font-semibold text-2xl mt-4" style={{ fontWeight: 600, fontSize: '24px' }}>02. Find your story.</h5>
-              <p className="text-sm mt-2 text-gray-400" style={{ fontFamily: 'DM Sans', fontWeight: 500, fontSize: '16px', lineHeight: '160%' }}>Storycraft suggests video narratives and captioning based on your brand's content and engagement trends.</p>
+              <h5 className="font-syne font-semibold text-3xl mt-4" style={{ fontWeight: 600, fontSize: '30px' }}>02. Find your story.</h5>
+              <p className="text-lg mt-2 text-gray-400" style={{ fontFamily: 'DM Sans', fontWeight: 500, fontSize: '20px', lineHeight: '160%' }}>Storycraft suggests video narratives and captioning based on your brand's content and engagement trends.</p>
             </motion.div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 mt-8">
@@ -383,14 +370,14 @@ export default function Home() {
               >
                 <Image
                   src="/images/step3.jpg"
-                  width={500}
-                  height={500}
+                  width={600}
+                  height={600}
                   alt="Cut, order, caption"
                   className="rounded-lg"
                 />
               </motion.div>
-              <h5 className="font-syne font-semibold text-2xl mt-4" style={{ fontWeight: 600, fontSize: '24px' }}>03. Cut, order, caption.</h5>
-              <p className="text-sm mt-2 text-gray-400" style={{ fontFamily: 'DM Sans', fontWeight: 500, fontSize: '16px', lineHeight: '160%' }}>We help you create a video sequence and caption, automatically structured for flow.</p>
+              <h5 className="font-syne font-semibold text-3xl mt-4" style={{ fontWeight: 600, fontSize: '30px' }}>03. Cut, order, caption.</h5>
+              <p className="text-lg mt-2 text-gray-400" style={{ fontFamily: 'DM Sans', fontWeight: 500, fontSize: '20px', lineHeight: '160%' }}>We help you create a video sequence and caption, automatically structured for flow.</p>
             </motion.div>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -405,14 +392,14 @@ export default function Home() {
               >
                 <Image
                   src="/images/step4.jpg"
-                  width={500}
-                  height={500}
+                  width={600}
+                  height={600}
                   alt="Make it shine"
                   className="rounded-lg"
                 />
               </motion.div>
-              <h5 className="font-syne font-semibold text-2xl mt-4" style={{ fontWeight: 600, fontSize: '24px' }}>04. Make it shine.</h5>
-              <p className="text-sm mt-2 text-gray-400" style={{ fontFamily: 'DM Sans', fontWeight: 500, fontSize: '16px', lineHeight: '160%' }}>Our AI helps you add styles to match reference videos, or your own brand style.</p>
+              <h5 className="font-syne font-semibold text-3xl mt-4" style={{ fontWeight: 600, fontSize: '30px' }}>04. Make it shine.</h5>
+              <p className="text-lg mt-2 text-gray-400" style={{ fontFamily: 'DM Sans', fontWeight: 500, fontSize: '20px', lineHeight: '160%' }}>Our AI helps you add styles to match reference videos, or your own brand style.</p>
             </motion.div>
           </div>
         </div>
@@ -421,15 +408,15 @@ export default function Home() {
       <section className="py-16 bg-black text-white text-center">
         <div className="border-t border-gray-300 my-32 opacity-50 w-full"></div>
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mb-20">
-          <h1 className="text-[60px] font-syne mb-8" style={{ fontWeight: 600 }}>
+          <h1 className="text-[80px] font-syne mb-8" style={{ fontWeight: 600 }}>
             Get Early Access
           </h1>
           <button
-            className="bg-white text-black font-syne text-button py-2 px-6 rounded-full shadow-md hover:shadow-lg hover:scale-105 transition-transform duration-300 inline-flex items-center"
+            className="bg-yellow-500 text-black font-syne text-2xl py-4 px-10 rounded-full shadow-md hover:shadow-lg hover:scale-105 transition-transform duration-300 inline-flex items-center"
             style={{ fontWeight: 600 }}
           >
             Join the waitlist
-            <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <svg className="w-6 h-6 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
             </svg>
           </button>
@@ -440,7 +427,7 @@ export default function Home() {
       <footer className="bg-transparent py-8 py-16">
         <div className="container mx-auto text-center text-gray-400 font-syne space-y-4">
           {/* <motion.hr className="border-gray-400 mb-4" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1 }} /> */}
-          <motion.p className="text-sm cursor-pointer hover:text-gray-300" whileHover={{ scale: 1.05 }}>
+          <motion.p className="text-lg cursor-pointer hover:text-gray-300" whileHover={{ scale: 1.05 }}>
             &copy; 2025 KNTC. All rights reserved.
           </motion.p>
         </div>
