@@ -21,7 +21,7 @@ export default {
         syne: ['Syne', 'sans-serif'],
       },
       fontWeight: {
-        semibold: 600,
+        semibold: "600",
       },
     },
   },
