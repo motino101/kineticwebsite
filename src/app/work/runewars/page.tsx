@@ -2,7 +2,6 @@
 
 import ProjectLayout from '@/components/ProjectLayout';
 import { motion } from 'framer-motion';
-import Image from 'next/image';
 
 export default function RuneWars() {
   return (
@@ -24,7 +23,7 @@ export default function RuneWars() {
           <p className="text-lg text-gray-300 mt-4">
             Players shoot rune-enforced stones from one hand using a pinch gesture, and use the other hand to raise 
             temporary walls from the ground using a pinch + drag gesture. These walls are destroyed after 5 seconds.
-            To win, a player reduce their opponent's health to zero.
+            To win, a player reduce their opponent&apos;s health to zero.
           </p>
         </div>
 
@@ -42,7 +41,7 @@ export default function RuneWars() {
               animate={{ opacity: 1, y: 0 }}
               className="bg-gray-800 p-6 rounded-lg"
             >
-              <h3 className="font-medium mb-4">Tools & Technologies</h3>
+              <h3 className="font-medium mb-4">Tools &amp; Technologies</h3>
               <ul className="space-y-2 text-gray-300">
                 <li>• Blender + Procreate: created 3D assets</li>
                 <li>• Lens Studio: implemented collision detection, gesture tracking</li>
@@ -59,7 +58,7 @@ export default function RuneWars() {
             >
               <h3 className="font-medium mb-4">Key Learnings</h3>
               <ul className="space-y-2 text-gray-300">
-                <li>• The medium is the message - AR is always "on"</li>
+                <li>• The medium is the message - AR is always &quot;on&quot;</li>
                 <li>• Consider movement within device limits</li>
                 <li>• Design for limited viewport in AR</li>
                 <li>• Balance between immersion and usability</li>

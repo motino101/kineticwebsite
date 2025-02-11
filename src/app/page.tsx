@@ -2,11 +2,8 @@
 
 import { motion } from 'framer-motion';
 import { useState, useEffect } from 'react';
-import Link from 'next/link';
 import { useTheme } from 'next-themes';
 import Image from 'next/image';
-
-const categories = ['All', 'Product', 'AR/VR', 'Design', 'Video', 'Entrepreneurship'];
 
 const projects = [
   { 
@@ -84,11 +81,10 @@ const projects = [
 ];
 
 export default function Home() {
-  const [selectedCategory, setSelectedCategory] = useState('All');
   const [mounted, setMounted] = useState(false);
   const [text, setText] = useState('');
   const fullText = 'made by creators.';
-  const { theme, setTheme } = useTheme();
+  const { setTheme } = useTheme();
 
   useEffect(() => {
     let index = 0;
@@ -105,11 +101,7 @@ export default function Home() {
   useEffect(() => {
     setMounted(true);
     setTheme('dark');
-  }, []);
-
-  const filteredProjects = projects.filter(project => 
-    selectedCategory === 'All' || project.category === selectedCategory
-  );
+  }, [setTheme]);
 
   if (!mounted) return null;
 
@@ -353,7 +345,7 @@ export default function Home() {
                 />
               </motion.div>
               <h5 className="font-syne font-semibold text-3xl mt-4" style={{ fontWeight: 600, fontSize: '30px' }}>02. Find your story.</h5>
-              <p className="text-lg mt-2 text-gray-400" style={{ fontFamily: 'DM Sans', fontWeight: 500, fontSize: '20px', lineHeight: '160%' }}>Storycraft suggests video narratives and captioning based on your brand's content and engagement trends.</p>
+              <p className="text-lg mt-2 text-gray-400" style={{ fontFamily: 'DM Sans', fontWeight: 500, fontSize: '20px', lineHeight: '160%' }}>Storycraft suggests video narratives and captioning based on your brand&apos;s content and engagement trends.</p>
             </motion.div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 mt-8">
