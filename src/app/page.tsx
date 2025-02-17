@@ -200,7 +200,7 @@ export default function Home() {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-center mt-4 mb-10 text-2xl"
+            className="text-center mt-4 mb-10 text-xl"
             style={{ fontFamily: 'DM Sans', fontWeight: 500 }}
           >
             Transform your scattered videos into compelling, platform-ready content in seconds. 
@@ -220,7 +220,7 @@ export default function Home() {
       </div>
 
       {/* Steps Section */}
-      <section className="py-16 bg-black text-white w-full">
+      <section className="py-16 bg-black text-white w-full mt-20">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* <div className="border-t border-gray-300 mt-8 mb-32 opacity-50 w-full"></div> */}
           {/* <div className="border-t border-gray-300 mt-4 mb-32 opacity-50 w-full"></div> */}
@@ -247,8 +247,8 @@ export default function Home() {
                   className="rounded-lg"
                 />
               </motion.div>
-              <h5 className="font-syne font-semibold text-3xl mt-4" style={{ fontWeight: 600, fontSize: '30px' }}>01. Upload your b-roll.</h5>
-              <p className="text-lg mt-2 text-gray-400" style={{ fontFamily: 'DM Sans', fontWeight: 500, fontSize: '20px', lineHeight: '160%' }}>Upload your video snippets from b-roll footage or past content.</p>
+              <h5 className="font-syne font-semibold text-3xl mt-4" style={{ fontWeight: 600, fontSize: '20px' }}>01. Upload your b-roll.</h5>
+              <p className="text-lg mt-2 text-gray-400" style={{ fontFamily: 'DM Sans', fontWeight: 500, fontSize: '20px', lineHeight: '160%', marginTop: '20px' }}>Upload your video snippets from b-roll footage or past content.</p>
             </motion.div>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -269,8 +269,8 @@ export default function Home() {
                   className="rounded-lg"
                 />
               </motion.div>
-              <h5 className="font-syne font-semibold text-3xl mt-4" style={{ fontWeight: 600, fontSize: '30px' }}>02. Find your story.</h5>
-              <p className="text-lg mt-2 text-gray-400" style={{ fontFamily: 'DM Sans', fontWeight: 500, fontSize: '20px', lineHeight: '160%' }}>Storycraft suggests video narratives and captioning based on your brand&apos;s content and engagement trends.</p>
+              <h5 className="font-syne font-semibold text-3xl mt-4" style={{ fontWeight: 600, fontSize: '20px' }}>02. Find your story.</h5>
+              <p className="text-lg mt-2 text-gray-400" style={{ fontFamily: 'DM Sans', fontWeight: 500, fontSize: '20px', lineHeight: '160%', marginTop: '20px' }}>Storycraft suggests video narratives and captioning based on your brand&apos;s content and engagement trends.</p>
             </motion.div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 mt-8">
@@ -293,8 +293,8 @@ export default function Home() {
                   className="rounded-lg"
                 />
               </motion.div>
-              <h5 className="font-syne font-semibold text-3xl mt-4" style={{ fontWeight: 600, fontSize: '30px' }}>03. Cut, order, caption.</h5>
-              <p className="text-lg mt-2 text-gray-400" style={{ fontFamily: 'DM Sans', fontWeight: 500, fontSize: '20px', lineHeight: '160%' }}>We help you create a video sequence and caption, automatically structured for flow.</p>
+              <h5 className="font-syne font-semibold text-3xl mt-4" style={{ fontWeight: 600, fontSize: '20px' }}>03. Cut, order, caption.</h5>
+              <p className="text-lg mt-2 text-gray-400" style={{ fontFamily: 'DM Sans', fontWeight: 500, fontSize: '20px', lineHeight: '160%', marginTop: '20px' }}>We help you create a video sequence and caption, automatically structured for flow.</p>
             </motion.div>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -315,8 +315,8 @@ export default function Home() {
                   className="rounded-lg"
                 />
               </motion.div>
-              <h5 className="font-syne font-semibold text-3xl mt-4" style={{ fontWeight: 600, fontSize: '30px' }}>04. Make it shine.</h5>
-              <p className="text-lg mt-2 text-gray-400" style={{ fontFamily: 'DM Sans', fontWeight: 500, fontSize: '20px', lineHeight: '160%' }}>Our AI helps you add styles to match reference videos, or your own brand style.</p>
+              <h5 className="font-syne font-semibold text-3xl mt-4" style={{ fontWeight: 600, fontSize: '20px' }}>04. Make it shine.</h5>
+              <p className="text-lg mt-2 text-gray-400" style={{ fontFamily: 'DM Sans', fontWeight: 500, fontSize: '20px', lineHeight: '160%', marginTop: '20px' }}>Our AI helps you add styles to match reference videos, or your own brand style.</p>
             </motion.div>
           </div>
         </div>
