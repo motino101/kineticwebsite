@@ -207,6 +207,7 @@ export default function Home() {
           </motion.h2>
           <div className="flex justify-center mt-6">
             <button
+              onClick={() => window.open('https://docs.google.com/forms/d/e/1FAIpQLSewBbVmB-Ym8EPWEaO60DZlLAy7Da_MB_dkO-jLbATyTYSxFA/viewform?usp=sharing', '_blank')}
               className="bg-yellow-500 text-black font-syne text-xl py-3 px-8 rounded-full shadow-md hover:shadow-lg hover:scale-105 transition-transform duration-300"
               style={{ fontWeight: 600 }}
             >
@@ -329,6 +330,7 @@ export default function Home() {
             Get Early Access
           </h1>
           <button
+            onClick={() => window.open('https://docs.google.com/forms/d/e/1FAIpQLSewBbVmB-Ym8EPWEaO60DZlLAy7Da_MB_dkO-jLbATyTYSxFA/viewform?usp=sharing', '_blank')}
             className="bg-yellow-500 text-black font-syne text-2xl py-4 px-10 rounded-full shadow-md hover:shadow-lg hover:scale-105 transition-transform duration-300 inline-flex items-center"
             style={{ fontWeight: 600 }}
           >
