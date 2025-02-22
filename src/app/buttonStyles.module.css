@@ -1,0 +1,17 @@
+/* buttonStyles.module.css */
+
+.button {
+  @apply flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 text-white text-sm font-bold leading-normal tracking-[0.015em];
+}
+
+.button-primary {
+  @apply bg-[#393328] px-4;
+}
+
+.button-secondary {
+  @apply flex-1 bg-[#edaf34] text-[#181611];
+}
+
+.button-icon {
+  @apply gap-2 pl-4;
+}

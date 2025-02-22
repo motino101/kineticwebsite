@@ -38,10 +38,13 @@ export default function Home() {
         animate={{ opacity: 1 }}
         className="absolute top-8 left-1/2 transform -translate-x-1/2 z-50"
       >
-        <header className="w-full z-50 shadow-md bg-black text-white">
+        <header className="w-full z-50 shadow-md bg-black text-white flex justify-between items-center px-4">
           <span className="font-syne text-3xl" style={{ fontWeight: 900, color: 'white' }}>
             kinetic
           </span>
+          <a href="/create-video" className="text-white font-medium bg-blue-500 hover:bg-blue-700 py-2 px-4 rounded transition-all duration-300 ease-in-out">
+            Create Video
+          </a>
         </header>
       </motion.div>
 
