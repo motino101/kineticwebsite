@@ -42,7 +42,7 @@ export default function Home() {
           <span className="font-syne text-3xl" style={{ fontWeight: 900, color: 'white' }}>
             kinetic
           </span>
-          <a href="/create-video" className="text-white font-medium bg-blue-500 hover:bg-blue-700 py-2 px-4 rounded transition-all duration-300 ease-in-out">
+          <a href="/upload-footage" className="text-white font-medium bg-blue-500 hover:bg-blue-700 py-2 px-4 rounded transition-all duration-300 ease-in-out">
             Create Video
           </a>
         </header>
