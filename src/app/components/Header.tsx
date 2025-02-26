@@ -1,13 +1,14 @@
 import React from 'react';
+import Link from 'next/link';
 
 const Header = () => {
   return (
     <header className="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#393328] w-full px-8 py-4">
       <div className="flex items-center gap-8">
         <div className="flex items-center gap-4 text-white">
-          <span className="font-syne text-2xl" style={{ fontWeight: 700, color: 'white' }}>
+          <Link href="/" className="font-syne text-2xl" style={{ fontWeight: 700, color: 'white' }}>
             kinetic
-          </span>
+          </Link>
         </div>
       </div>
       <div className="flex gap-2">

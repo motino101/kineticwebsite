@@ -1,6 +1,7 @@
 'use client';
 import React, { useState, ChangeEvent } from 'react';
 import Header from '../components/Header';
+import { useRouter } from 'next/navigation';
 interface StepThreeProps {}
 
 const StepThree: React.FC<StepThreeProps> = () => {
@@ -9,6 +10,8 @@ const StepThree: React.FC<StepThreeProps> = () => {
   const handleSearchChange = (e: ChangeEvent<HTMLInputElement>) => {
     setSearchValue(e.target.value);
   };
+
+  const router = useRouter();
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -114,9 +117,12 @@ const StepThree: React.FC<StepThreeProps> = () => {
           </div>
 
           <div className="flex px-4 py-12 justify-center mt-16">
-            <a href="/step-three" className="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-4 flex-1 bg-[#edaf34] text-[#181611] text-sm font-bold leading-normal tracking-[0.015em]">
-              <span className="truncate">Continue</span>
-            </a>
+            <button 
+              onClick={() => router.push('/loading')} 
+              className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+            >
+              Next
+            </button>
           </div>
         </div>
       </div>
