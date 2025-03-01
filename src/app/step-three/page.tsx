@@ -56,7 +56,7 @@ const StepThree = () => {
           
           <div className="px-40 flex flex-1 justify-center py-5">
             <div className="layout-content-container flex flex-col w-[512px] max-w-[512px] py-5 max-w-[960px] flex-1">
-            <CreateVideoTitle />
+            <CreateVideoTitle title="Create Video" />
               <div className="flex flex-col gap-3 p-4">
                 <StepIndicator stepNumber={3} stepTitle="Select music" />
                 <ProgressBar progress={75} />
