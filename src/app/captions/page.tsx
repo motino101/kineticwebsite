@@ -1,10 +1,28 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import Head from "next/head"; // If using Next.js
 import Header from "../components/Header";
+import { FaPencilAlt, FaCheck, FaDownload, FaRedo, FaVideo } from 'react-icons/fa';
+import { useRouter } from 'next/navigation';
 
 const CaptionsPage: React.FC = () => {
+  const router = useRouter();
+  const [captions, setCaptions] = useState('Start with a beautiful shot of your location');
+  const [isEditing, setIsEditing] = useState(false);
+
+  const handleEditClick = () => {
+    setIsEditing(!isEditing);
+  };
+
+  const handleSaveClick = () => {
+    setIsEditing(false);
+  };
+
+  const handleCreateAnotherVideo = () => {
+    router.push('/upload-footage');
+  };
+
   return (
     <>
       <Head>
@@ -15,7 +33,7 @@ const CaptionsPage: React.FC = () => {
         />
       </Head>
 
-      <div className="relative min-h-screen flex flex-col bg-[#181611] text-white font-sans overflow-x-hidden" style={{ fontFamily: 'Space Grotesk, Noto Sans, sans-serif' }}>
+      <div className="relative min-h-screen flex flex-col text-white font-sans overflow-x-hidden" style={{ fontFamily: 'Space Grotesk, Noto Sans, sans-serif' }}>
         {/* Header Component */}
         <Header />
 
@@ -34,7 +52,7 @@ const CaptionsPage: React.FC = () => {
                   backgroundImage: `url("https://cdn.usegalileo.ai/sdxl10/8a108b61-08cd-4039-a0cf-a5ed7fb4a4a5.png")`,
                 }}
               >
-                <button className="flex shrink-0 items-center justify-center rounded-full size-16 bg-black/40 text-white">
+                <button className="flex shrink-0 items-center justify-center rounded-lg size-16  text-white">
                   {/* Play Button Icon */}
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -55,7 +73,7 @@ const CaptionsPage: React.FC = () => {
                 Captions and B-roll
               </h3>
 
-              <div className="bg-[#181611] px-4 min-h-[72px] py-2 flex items-center justify-between gap-4 border-b border-[#393328]">
+              <div className="px-4 min-h-[72px] py-2 flex items-center justify-between gap-4 border-b border-[#b9b09d]">
                 <div className="flex items-center gap-4">
                   <div className="text-white flex items-center justify-center rounded-lg bg-[#393328] shrink-0 size-12">
                     {/* Video File Icon */}
@@ -70,9 +88,24 @@ const CaptionsPage: React.FC = () => {
                     </svg>
                   </div>
                   <div className="flex flex-col justify-center">
-                    <p className="text-white text-base font-medium leading-normal b-roll-text">
-                      Start with a beautiful shot of your location
-                    </p>
+                    <div className="flex items-center gap-2">
+                      {isEditing ? (
+                        <textarea
+                          value={captions}
+                          onChange={(e) => setCaptions(e.target.value)}
+                          className="w-full h-40 p-2 border border-gray-300 rounded-lg bg-transparent text-white text-base font-medium leading-normal b-roll-text"
+                        />
+                      ) : (
+                        <p className="text-white text-base font-medium leading-normal b-roll-text">
+                          {captions}
+                        </p>
+                      )}
+                      {isEditing ? (
+                        <FaCheck onClick={handleSaveClick} className="text-gray-400 cursor-pointer" />
+                      ) : (
+                        <FaPencilAlt onClick={handleEditClick} className="text-gray-400 cursor-pointer" />
+                      )}
+                    </div>
                     <p className="text-[#b9b09d] text-sm font-normal leading-normal">
                       0:00 - 0:05
                     </p>
@@ -82,14 +115,21 @@ const CaptionsPage: React.FC = () => {
               </div>
             </div>
           </div>
+          <div className="flex justify-center mt-10 w-full">
+            <button
+              className="flex items-center px-6 py-3 bg-[#edaf34] text-[#181611] rounded-lg mr-4 shadow-lg">
+              <FaDownload className="mr-2" />
+              Download
+            </button>
+            <button onClick={handleCreateAnotherVideo} className="flex items-center px-6 py-3 bg-[#393328] bg-opacity-70 text-white rounded-lg shadow-lg">
+              <FaRedo className="mr-2" />
+              Create
+            </button>
+          </div>
         </div>
 
         {/* Save Button */}
-        <div className="flex justify-center py-5">
-          <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-            Save Captions
-          </button>
-        </div>
+        
       </div>
     </>
   );

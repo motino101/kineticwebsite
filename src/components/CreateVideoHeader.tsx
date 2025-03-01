@@ -15,7 +15,7 @@ const BackButton: React.FC = () => {
   return (
     <button
       onClick={handleBack}
-      className="absolute top-4 left-4 bg-transparent text-white text-2xl font-bold"
+      className="absolute top-10 left-4 bg-transparent text-white text-2xl font-bold"
     >
       <FaArrowLeft />
     </button>

@@ -33,7 +33,7 @@ const LoadingPage: React.FC = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
-      <div className="flex flex-1 flex-col items-center justify-center bg-black text-white">
+      <div className="flex flex-1 flex-col items-center justify-center text-white">
         <div className="flex flex-col items-center justify-center">
           {/* <h2 className="text-white tracking-light text-[28px] font-bold leading-tight px-4 text-center pb-3 pt-5">Your video is being created</h2> */}
           <div className="flex flex-col gap-3 p-4">
@@ -41,7 +41,7 @@ const LoadingPage: React.FC = () => {
               <p className="text-white text-base font-medium b-roll-text leading-normal">Video creation in progress</p>
               <p className="text-white text-sm font-normal b-roll-text leading-normal">{progress}%</p>
             </div>
-            <div className="rounded bg-[#544b3b] w-full">
+            <div className="rounded  w-full">
               <div className="h-2 rounded bg-white" style={{ width: `${progress}%`, transition: 'width 0.3s' }}></div>
             </div>
           </div>

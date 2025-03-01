@@ -1,6 +1,5 @@
 "use client"
-import React from 'react';
-import { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Header from '../components/Header';
 import { useRouter } from 'next/navigation';
 import { CreateVideoTitle } from '../../components/CreateVideoHeader';
@@ -11,9 +10,13 @@ const VideoShowcase = () => {
   const router = useRouter();
   const [windowDimensions, setWindowDimensions] = useState({ width: window.innerWidth, height: window.innerHeight });
 
-  const handleContinue = () => {
-    router.push('/captions');
-  };
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      router.push('/captions');
+    }, 3000);
+
+    return () => clearTimeout(timer);
+  }, []);
 
   return (
     <div className="flex flex-col items-center justify-center">
@@ -24,12 +27,12 @@ const VideoShowcase = () => {
           <FaCheckCircle className="text-white text-5xl mb-4" />
           <CreateVideoTitle title="Your video is ready!" />
           <div className="flex justify-center mt-4 w-full">
-            <button
+            {/* <button
               onClick={handleContinue}
-              className="flex w-full max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-12 px-6 bg-[#edaf34] text-[#181611] text-lg font-bold leading-normal tracking-[0.015em]"
+              className="flex w-full max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-12 px-6 bg-black text-lg b-roll-text text-[#181611] leading-normal tracking-[0.015em]"
             >
               Check it out
-            </button>
+            </button> */}
           </div>
         </div>
       </div>

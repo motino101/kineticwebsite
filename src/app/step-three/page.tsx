@@ -45,12 +45,7 @@ const StepThree = () => {
     <div className="min-h-screen flex flex-col">
       <Header />
       <div className="relative flex flex-col min-h-screen bg-black dark group/design-root overflow-hidden" style={{ fontFamily: 'Space Grotesk, Noto Sans, sans-serif', height: '100vh' }}>
-        <button
-          onClick={handleBack}
-          className="absolute top-4 left-4 bg-transparent text-white text-2xl font-bold"
-        >
-          <FaArrowLeft />
-        </button>
+        
         <div className="layout-container flex h-full grow flex-col">
           <BackButton />
           
