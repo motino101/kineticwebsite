@@ -1,45 +1,22 @@
 "use client"
 
 import React from 'react';
-import { useState, useCallback } from 'react';
+import { useState } from 'react';
 import Header from '../components/Header';
 import { useRouter } from 'next/navigation';
 import { BackButton, CreateVideoTitle, StepIndicator, ProgressBar } from '../../components/CreateVideoHeader';
-
-import { FaArrowLeft, FaTimes } from 'react-icons/fa';
-
 
 const StepThree = () => {
   const router = useRouter();
   const [searchValue, setSearchValue] = useState<string>('');
 
-  const handleSearchChange = (e: ChangeEvent<HTMLInputElement>) => {
+  const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSearchValue(e.target.value);
   };
-
 
   const handleContinue = () => {
     router.push('/loading');
   };
-
-  const handleBack = () => {
-    router.back();
-  };
-
-  const handleRemoveVideo = (index: number) => {
-    setUploadedVideos(prevVideos => prevVideos.filter((_, i) => i !== index));
-  };
-
-  const handleDragOver = useCallback((event: React.DragEvent<HTMLDivElement>) => {
-    event.preventDefault();
-  }, []);
-
-  const handleDrop = useCallback((event: React.DragEvent<HTMLDivElement>) => {
-    event.preventDefault();
-    const files = event.dataTransfer.files;
-    // Handle file upload logic here
-    console.log(files);
-  }, []);
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -92,7 +69,7 @@ const StepThree = () => {
                       style={{ backgroundImage: 'url("https://cdn.usegalileo.ai/sdxl10/87cedd25-318a-47d2-8f3b-f3e767100687.png")' }}
                     ></div>
                     <div className="flex-1">
-                      <p className="text-white text-base font-bold leading-tight truncate">Peppa's Dry World</p>
+                      <p className="text-white text-base font-bold leading-tight truncate">Peppa&apos;s Dry World</p>
                       <p className="text-[#b9b09d] text-sm font-normal leading-normal truncate">Lucas Harris</p>
                     </div>
                     <button className="flex shrink-0 items-center justify-center rounded-full size-10 bg-[#edaf34] text-[#181611]">
@@ -210,7 +187,7 @@ const StepThree = () => {
                       style={{ backgroundImage: 'url("https://cdn.usegalileo.ai/sdxl10/87cedd25-318a-47d2-8f3b-f3e767100687.png")' }}
                     ></div>
                     <div className="flex-1">
-                      <p className="text-white text-base font-bold leading-tight truncate">Peppa's Dry World</p>
+                      <p className="text-white text-base font-bold leading-tight truncate">Peppa&apos;s Dry World</p>
                       <p className="text-[#b9b09d] text-sm font-normal leading-normal truncate">Lucas Harris</p>
                     </div>
                     <button className="flex shrink-0 items-center justify-center rounded-full size-10 bg-[#edaf34] text-[#181611]">

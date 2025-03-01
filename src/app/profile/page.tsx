@@ -4,11 +4,7 @@ import Header from '../components/Header';
 const ProfilePage: React.FC = () => {
   return (
     <div className="min-h-screen flex flex-col bg-black" style={{ fontFamily: 'Space Grotesk, Noto Sans, sans-serif' }}>
-      <link
-        rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?display=swap&family=Noto+Sans:wght@400;500;700;900&family=Space+Grotesk:wght@400;500;700"
-      />
-      <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+      <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries" async></script>
       <Header />
       <div className="layout-container flex h-full grow flex-col">
         <div className="px-40 flex flex-1 justify-center py-5">

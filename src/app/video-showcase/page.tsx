@@ -8,7 +8,11 @@ import { FaCheckCircle } from 'react-icons/fa';
 
 const VideoShowcase = () => {
   const router = useRouter();
-  const [windowDimensions, setWindowDimensions] = useState({ width: window.innerWidth, height: window.innerHeight });
+  const [windowDimensions, setWindowDimensions] = useState({ width: 0, height: 0 });
+
+  useEffect(() => {
+    setWindowDimensions({ width: window.innerWidth, height: window.innerHeight });
+  }, []);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -16,7 +20,7 @@ const VideoShowcase = () => {
     }, 3000);
 
     return () => clearTimeout(timer);
-  }, []);
+  }, [router]);
 
   return (
     <div className="flex flex-col items-center justify-center">

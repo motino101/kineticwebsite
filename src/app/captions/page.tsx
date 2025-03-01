@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import Head from "next/head"; // If using Next.js
 import Header from "../components/Header";
-import { FaPencilAlt, FaCheck, FaDownload, FaRedo, FaVideo } from 'react-icons/fa';
+import { FaPencilAlt, FaCheck, FaDownload, FaRedo } from 'react-icons/fa';
 import { useRouter } from 'next/navigation';
 
 const CaptionsPage: React.FC = () => {
@@ -27,10 +27,6 @@ const CaptionsPage: React.FC = () => {
     <>
       <Head>
         <title>Galileo Design</title>
-        <link
-          rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?display=swap&family=Noto+Sans:wght@400;500;700;900&family=Space+Grotesk:wght@400;500;700"
-        />
       </Head>
 
       <div className="relative min-h-screen flex flex-col text-white font-sans overflow-x-hidden" style={{ fontFamily: 'Space Grotesk, Noto Sans, sans-serif' }}>

@@ -3,7 +3,7 @@
 import React, { useState, useCallback } from 'react';
 import { useRouter } from 'next/navigation';
 import Header from '../components/Header';
-import { FaTimes, FaArrowLeft } from 'react-icons/fa';
+import { FaTimes } from 'react-icons/fa';
 import { BackButton, CreateVideoTitle, StepIndicator, ProgressBar } from '../../components/CreateVideoHeader';
 
 const UploadFootage: React.FC = () => {
@@ -12,10 +12,6 @@ const UploadFootage: React.FC = () => {
 
   const handleContinue = () => {
     router.push('/create-video');
-  };
-
-  const handleBack = () => {
-    router.back();
   };
 
   const handleRemoveVideo = (index: number) => {

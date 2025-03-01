@@ -1,14 +1,18 @@
 "use client"
 
 import React from 'react';
-import { useState, useCallback } from 'react';
-import Header from '../components/Header';
 import { useRouter } from 'next/navigation';
 import { BackButton, CreateVideoTitle, StepIndicator, ProgressBar } from '../../components/CreateVideoHeader';
+import Header from '../components/Header';
 
-import { FaArrowLeft, FaTimes } from 'react-icons/fa';
+interface ClipProps {
+  image: string;
+  title: string;
+  duration: string;
+  description: string;
+}
 
-const Clip = ({ image, title, duration, description }) => {
+const Clip: React.FC<ClipProps> = ({ image, title, duration, description }) => {
   return (
     <div className="flex items-center gap-4 px-4 min-h-[72px] py-2 justify-between">
       <div className="flex items-center gap-4">
@@ -35,30 +39,10 @@ const Clip = ({ image, title, duration, description }) => {
 
 const CreateVideo = () => {
   const router = useRouter();
-  const [uploadedVideos, setUploadedVideos] = useState<string[]>(['Video 1', 'Video 2', 'Video 3']);
 
   const handleContinue = () => {
     router.push('/step-three');
   };
-
-  const handleBack = () => {
-    router.back();
-  };
-
-  const handleRemoveVideo = (index: number) => {
-    setUploadedVideos(prevVideos => prevVideos.filter((_, i) => i !== index));
-  };
-
-  const handleDragOver = useCallback((event: React.DragEvent<HTMLDivElement>) => {
-    event.preventDefault();
-  }, []);
-
-  const handleDrop = useCallback((event: React.DragEvent<HTMLDivElement>) => {
-    event.preventDefault();
-    const files = event.dataTransfer.files;
-    // Handle file upload logic here
-    console.log(files);
-  }, []);
 
   return (
     <div className="min-h-screen flex flex-col">
