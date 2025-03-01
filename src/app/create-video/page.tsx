@@ -1,55 +1,12 @@
-import React from 'react';
+"use client"
 
-const Header = () => {
-  return (
-    <header className="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#393328] w-full px-8 py-4">
-      <div className="flex items-center gap-8">
-        <div className="flex items-center gap-4 text-white">
-          <span className="font-syne text-2xl" style={{ fontWeight: 700, color: 'white' }}>
-            kinetic
-          </span>
-        </div>
-        {/* <label className="flex flex-col min-w-40 !h-10 max-w-64">
-          <div className="flex w-full flex-1 items-stretch rounded-xl h-full">
-            <div
-              className="text-[#b9b09d] flex border-none bg-[#393328] items-center justify-center pl-4 rounded-l-xl border-r-0"
-              data-icon="MagnifyingGlass"
-              data-size="24px"
-              data-weight="regular"
-            >
-              <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
-                <path
-                  d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"
-                ></path>
-              </svg>
-            </div>
-            <input
-              placeholder="Search"
-              className="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-white focus:outline-0 focus:ring-0 border-none bg-[#393328] focus:border-none h-full placeholder:text-[#b9b09d] px-4 rounded-l-none border-l-0 pl-2 text-base font-normal leading-normal"
-              value=""
-            />
-          </div>
-        </label> */}
-      </div>
-      <div className="flex gap-2">
-        {/* <button
-          className="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-4 bg-[#393328] text-white text-sm font-bold leading-normal tracking-[0.015em]"
-        >
-          <span className="truncate">Upgrade to Pro</span>
-        </button> */}
-        <div
-          className="flex cursor-pointer items-center justify-center overflow-hidden h-10 text-white gap-2"
-        >
-          <div className="text-white" data-icon="Profile" data-size="20px" data-weight="regular">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
-            </svg>
-          </div>
-        </div>
-      </div>
-    </header>
-  );
-};
+import React from 'react';
+import { useState, useCallback } from 'react';
+import Header from '../components/Header';
+import { useRouter } from 'next/navigation';
+import { BackButton, CreateVideoTitle, StepIndicator, ProgressBar } from '../../components/CreateVideoHeader';
+
+import { FaArrowLeft, FaTimes } from 'react-icons/fa';
 
 const Clip = ({ image, title, duration, description }) => {
   return (
@@ -77,23 +34,54 @@ const Clip = ({ image, title, duration, description }) => {
 };
 
 const CreateVideo = () => {
+  const router = useRouter();
+  const [uploadedVideos, setUploadedVideos] = useState<string[]>(['Video 1', 'Video 2', 'Video 3']);
+
+  const handleContinue = () => {
+    router.push('/step-three');
+  };
+
+  const handleBack = () => {
+    router.back();
+  };
+
+  const handleRemoveVideo = (index: number) => {
+    setUploadedVideos(prevVideos => prevVideos.filter((_, i) => i !== index));
+  };
+
+  const handleDragOver = useCallback((event: React.DragEvent<HTMLDivElement>) => {
+    event.preventDefault();
+  }, []);
+
+  const handleDrop = useCallback((event: React.DragEvent<HTMLDivElement>) => {
+    event.preventDefault();
+    const files = event.dataTransfer.files;
+    // Handle file upload logic here
+    console.log(files);
+  }, []);
+
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
-      <div className="px-40 flex flex-1 justify-center py-5">
-        <div className="layout-content-container flex flex-col w-[512px] max-w-[512px] py-5 max-w-[960px] flex-1">
-          <div className="flex flex-wrap justify-between gap-3 p-4">
-            <p className="text-white tracking-light text-[32px] font-bold leading-tight min-w-72">Create Video</p>
-          </div>
-          <div className="flex flex-col gap-3 p-4">
-            <div className="flex gap-6 justify-between">
-              <p className="section-title text-white text-base font-medium leading-normal">Step 2: Choose storyline</p>
-            </div>
-            <div className="rounded bg-[#544b3b]">
-              <div className="h-2 rounded bg-white" style={{ width: '20%' }}></div>
-            </div>
-          </div>
-          <div className="flex  w-full p-4 ">
+      <div className="relative flex flex-col min-h-screen bg-black dark group/design-root overflow-hidden" style={{ fontFamily: 'Space Grotesk, Noto Sans, sans-serif', height: '100vh' }}>
+        <button
+          onClick={handleBack}
+          className="absolute top-4 left-4 bg-transparent text-white text-2xl font-bold"
+        >
+          <FaArrowLeft />
+        </button>
+        <div className="layout-container flex h-full grow flex-col">
+          <BackButton />
+          
+          <div className="px-40 flex flex-1 justify-center py-5">
+            <div className="layout-content-container flex flex-col w-[512px] max-w-[512px] py-5 max-w-[960px] flex-1">
+            <CreateVideoTitle />
+              <div className="flex flex-col gap-3 p-4">
+                <StepIndicator stepNumber={2} stepTitle="Choose Storyline" />
+                <ProgressBar progress={33} />
+                
+              </div>
+              <div className="flex  w-full p-4 ">
             <div className="flex items-start gap-2 p-4 bg-[#edaf3433] rounded-lg">
               <div className="text-white" data-icon="Sparkle" data-size="20px" data-weight="regular">
                 <svg xmlns="http://www.w3.org/2000/svg" width="40px" height="40px" fill="currentColor" viewBox="0 0 24 24">
@@ -127,24 +115,21 @@ const CreateVideo = () => {
             duration="0:20 - 0:30"
             description="This clip provides a closer look at the subject, emphasizing their emotions and reactions."
           />
-          <Clip
-            image="https://cdn.usegalileo.ai/sdxl10/94b447f8-978a-42a4-ba4d-09216462f7ce.png"
-            title="B-roll 4"
-            duration="0:30 - 0:40"
-            description="This clip captures the subject's interactions with their environment, showcasing their personality."
-          />
-          <Clip
-            image="https://cdn.usegalileo.ai/sdxl10/0ad92965-ca11-4e76-8899-2183c99912c3.png"
-            title="B-roll 5"
-            duration="0:40 - 0:50"
-            description="This clip adds a sense of closure to the scene, wrapping up the story and leaving a lasting impression."
-          />
-          <div className="flex px-4 py-12 justify-center mt-16">
-            <a href="/step-three" className="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-4 flex-1 bg-[#edaf34] text-[#181611] text-sm font-bold leading-normal tracking-[0.015em]">
-              <span className="truncate">Continue</span>
-            </a>
+              
+              <div className="flex justify-center mt-10">
+                <button
+                  onClick={handleContinue} 
+                  className="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-4 bg-[#edaf34] text-[#181611] text-sm font-bold leading-normal tracking-[0.015em] w-full"
+                >
+                  Continue
+                </button>
+              </div>
+            </div>
+            
           </div>
+          
         </div>
+        
       </div>
     </div>
   );

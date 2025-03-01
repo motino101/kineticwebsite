@@ -4,6 +4,7 @@ import React, { useState, useCallback } from 'react';
 import { useRouter } from 'next/navigation';
 import Header from '../components/Header';
 import { FaTimes, FaArrowLeft } from 'react-icons/fa';
+import { BackButton, CreateVideoTitle, StepIndicator, ProgressBar } from '../../components/CreateVideoHeader';
 
 const UploadFootage: React.FC = () => {
   const router = useRouter();
@@ -37,37 +38,29 @@ const UploadFootage: React.FC = () => {
       <Header />
       <div className="relative flex flex-col min-h-screen bg-black dark group/design-root overflow-hidden" style={{ fontFamily: 'Space Grotesk, Noto Sans, sans-serif', height: '100vh' }}>
         <button
-          onClick={() => router.back()}
-          className="absolute top-4 left-4 bg-transparent text-white text-xl font-bold"
+          onClick={handleBack}
+          className="absolute top-4 left-4 bg-transparent text-white text-2xl font-bold"
         >
           <FaArrowLeft />
         </button>
         <div className="layout-container flex h-full grow flex-col">
+          <BackButton />
           
           <div className="px-40 flex flex-1 justify-center py-5">
             <div className="layout-content-container flex flex-col w-[512px] max-w-[512px] py-5 max-w-[960px] flex-1">
-            <div className="flex flex-wrap justify-between gap-3 p-4">
-            <p className="text-white tracking-light text-[32px] font-bold leading-tight min-w-72">Create Video</p>
-          </div>
-          <div className="flex flex-col gap-3 p-4">
-            <div className="flex gap-6 justify-between">
-              <p className="section-title text-white text-base font-medium leading-normal">Step 1: Upload Footage</p>
-            </div>
-            <div className="rounded bg-[#544b3b]">
-              <div className="h-2 rounded bg-white" style={{ width: '33%' }}></div>
-            </div>
-            <div
-              className="border-dashed border-2 border-[#393328] rounded-lg p-4 mt-4 text-center text-white cursor-pointer"
-              onDragOver={handleDragOver}
-              onDrop={handleDrop}
-            >
-              Drag & drop your videos here
-            </div>
-          </div>
+            <CreateVideoTitle />
               <div className="flex flex-col gap-3 p-4">
-                {/* <div className="flex gap-6 justify-between"><p className="text-white text-base font-medium leading-normal">Upload</p></div> */}
-                {/* <div className="rounded bg-[#544b3b]"><div className="h-2 rounded bg-white" style={{ width: '50%' }}></div></div> */}
-                {/* <p className="text-[#b9b09d] text-sm font-normal leading-normal">3 of 6 clips uploaded</p> */}
+                <StepIndicator stepNumber={1} stepTitle="Upload Footage" />
+                <ProgressBar progress={33} />
+                <div
+                  className="border-dashed border-2 border-[#393328] rounded-lg p-4 mt-4 text-center text-white cursor-pointer"
+                  onDragOver={handleDragOver}
+                  onDrop={handleDrop}
+                >
+                  Drag & drop your videos here
+                </div>
+              </div>
+              <div className="flex flex-col gap-3 p-4">
                 <div className="text-white text-base font-medium leading-normal">
                   {uploadedVideos.length} video(s) uploaded
                 </div>

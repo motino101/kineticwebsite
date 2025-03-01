@@ -1,6 +1,6 @@
 'use client';
 
-import ProjectLayout from '@/components/ProjectLayout';
+import ProjectLayout from '@/app/components/ProjectLayout';
 import { motion } from 'framer-motion';
 
 export default function RuneWars() {
