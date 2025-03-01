@@ -8,7 +8,7 @@ import Image from 'next/image';
 export default function Home() {
   const [mounted, setMounted] = useState(false);
   const [text, setText] = useState('');
-  const fullText = 'made by creators.';
+  const fullText = 'made for brands.';
   const { setTheme } = useTheme();
 
   useEffect(() => {
@@ -38,13 +38,10 @@ export default function Home() {
         animate={{ opacity: 1 }}
         className="absolute top-8 left-1/2 transform -translate-x-1/2 z-50"
       >
-        <header className="w-full z-50 shadow-md bg-black text-white flex justify-between items-center px-4">
+        <header className="w-full z-50 text-white flex justify-between items-center px-4">
           <span className="font-syne text-3xl" style={{ fontWeight: 900, color: 'white' }}>
             kinetic
           </span>
-          <a href="/upload-footage" className="text-white font-medium bg-blue-500 hover:bg-blue-700 py-2 px-4 rounded transition-all duration-300 ease-in-out">
-            Create Video
-          </a>
         </header>
       </motion.div>
 
@@ -65,7 +62,7 @@ export default function Home() {
               whileHover={{ scale: 1.05 }}
             >
               <Image
-                src="/home/ex1.png"
+                src="/home/1.jpg"
                 alt="Interactive Image 1"
                 width={250}
                 height={200}
@@ -87,7 +84,7 @@ export default function Home() {
               whileHover={{ scale: 1.05 }}
             >
               <Image
-                src="/home/ex2.png"
+                src="/home/2.jpg"
                 alt="Interactive Image 2"
                 width={230}
                 height={180}
@@ -109,7 +106,7 @@ export default function Home() {
               whileHover={{ scale: 1.05 }}
             >
               <Image
-                src="/home/ex3.png"
+                src="/home/3.jpg"
                 alt="Interactive Image 3"
                 width={200}
                 height={150}
@@ -131,7 +128,7 @@ export default function Home() {
               whileHover={{ scale: 1.05 }}
             >
               <Image
-                src="/home/ex4.png"
+                src="/home/4.jpg"
                 alt="Interactive Image 4"
                 width={270}
                 height={210}
@@ -153,7 +150,7 @@ export default function Home() {
               whileHover={{ scale: 1.05 }}
             >
               <Image
-                src="/home/ex5.avif"
+                src="/home/5.jpg"
                 alt="Interactive Image 5"
                 width={200}
                 height={150}
@@ -175,7 +172,7 @@ export default function Home() {
               whileHover={{ scale: 1.05 }}
             >
               <Image
-                src="/home/ex6.webp"
+                src="/home/6.jpg"
                 alt="Interactive Image 6"
                 width={220}
                 height={170}
@@ -197,7 +194,7 @@ export default function Home() {
             transition={{ duration: 0.8 }}
             className="text-[80px] mt-16 font-syne text-center leading-tight" style={{ fontWeight: 600 }}
           >
-            The next-gen editing tool, <br /> <span className="italic">{text}</span>
+            Short form videos <br /> <span className="italic">{text}</span>
           </motion.h1>
           <motion.h2
             initial={{ opacity: 0, y: -20 }}
@@ -206,7 +203,7 @@ export default function Home() {
             className="text-center mt-4 mb-10 text-xl"
             style={{ fontFamily: 'DM Sans', fontWeight: 500 }}
           >
-            Transform your scattered videos into compelling, platform-ready content in seconds. 
+            Transforming b-roll into audience-ready content in seconds, powered by AI.
           </motion.h2>
           <div className="flex justify-center mt-6">
             <button
@@ -219,6 +216,9 @@ export default function Home() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
               </svg>
             </button>
+            {/* <a href="/upload-footage" className="ml-4 bg-white bg-opacity-20 text-white font-syne text-xl py-3 px-8 rounded-full shadow-md hover:shadow-lg hover:scale-105 transition-transform duration-300">
+              Try Demo
+            </a> */}
           </div>
         </motion.div>
       </div>
@@ -228,7 +228,7 @@ export default function Home() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* <div className="border-t border-gray-300 mt-8 mb-32 opacity-50 w-full"></div> */}
           {/* <div className="border-t border-gray-300 mt-4 mb-32 opacity-50 w-full"></div> */}
-          <h1 className="text-[60px] font-syne text-center leading-tight mb-12" style={{ fontWeight: 600 }}>
+          <h1 className="text-[60px] font-syne text-center leading-tight mb-12 mt-12" style={{ fontWeight: 600 }}>
             Introducing, Kinetic.
           </h1>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
@@ -349,8 +349,8 @@ export default function Home() {
       <footer className="bg-transparent py-8 py-16">
         <div className="container mx-auto text-center text-gray-400 font-syne space-y-4">
           {/* <motion.hr className="border-gray-400 mb-4" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1 }} /> */}
-          <motion.p className="text-lg cursor-pointer hover:text-gray-300" whileHover={{ scale: 1.05 }}>
-            &copy; 2025 KNTC. All rights reserved.
+          <motion.p className="text-lg cursor-pointer text-white hover:text-gray-300" whileHover={{ scale: 1.05 }}>
+            &copy; 2025 KINETIC. All rights reserved.
           </motion.p>
         </div>
       </footer>
