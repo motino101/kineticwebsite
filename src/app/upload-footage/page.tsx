@@ -14,6 +14,8 @@ const UploadFootage: React.FC = () => {
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   const handleContinue = async () => {
+
+    console.log("uploading!:", uploadedFiles);
     if (uploadedFiles.length === 0) return;
 
     try {
