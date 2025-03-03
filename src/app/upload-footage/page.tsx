@@ -1,17 +1,28 @@
 "use client";
 
-import React, { useState, useCallback } from 'react';
+import React, { useState, useCallback, useRef } from 'react';
 import { useRouter } from 'next/navigation';
 import Header from '../components/Header';
 import { FaTimes } from 'react-icons/fa';
+import { uploadVideos } from '../../api/uploadFootageAPI';
 import { BackButton, CreateVideoTitle, StepIndicator, ProgressBar } from '../../components/CreateVideoHeader';
 
 const UploadFootage: React.FC = () => {
   const router = useRouter();
-  const [uploadedVideos, setUploadedVideos] = useState<string[]>(['Video 1', 'Video 2', 'Video 3']);
+  const [uploadedVideos, setUploadedVideos] = useState<string[]>([]);
+  const [uploadedFiles, setUploadedFiles] = useState<File[]>([]);
+  const fileInputRef = useRef<HTMLInputElement>(null);
 
-  const handleContinue = () => {
-    router.push('/create-video');
+  const handleContinue = async () => {
+    if (uploadedFiles.length === 0) return;
+
+    try {
+      const result = await uploadVideos(uploadedFiles); // Call the function
+      console.log('Upload success:', result);
+      router.push('/create-video'); // Navigate to the next page after successful upload
+    } catch (error) {
+      console.error('Upload error:', error);
+    }
   };
 
   const handleRemoveVideo = (index: number) => {
@@ -24,9 +35,24 @@ const UploadFootage: React.FC = () => {
 
   const handleDrop = useCallback((event: React.DragEvent<HTMLDivElement>) => {
     event.preventDefault();
-    const files = event.dataTransfer.files;
-    // Handle file upload logic here
-    console.log(files);
+    if (event.dataTransfer.files) {
+      const files = Array.from(event.dataTransfer.files);
+      setUploadedFiles(prevFiles => {
+        const newFiles = [...prevFiles, ...files];
+        console.log("Updated uploadedFiles:", newFiles); // Log the updated state
+        return newFiles;
+      });
+    }
+  }, []);
+
+  const handleFileChange = useCallback((event: React.ChangeEvent<HTMLInputElement>) => {
+    if (event.target.files) {
+      // Handle file upload logic here
+      console.log(event.target.files);
+      // Add uploaded files to the state
+      const fileNames = Array.from(event.target.files).map(file => file.name);
+      setUploadedVideos(prevVideos => [...prevVideos, ...fileNames]);
+    }
   }, []);
 
   return (
@@ -43,10 +69,18 @@ const UploadFootage: React.FC = () => {
               <div className="flex flex-col gap-3 p-4">
                 <StepIndicator stepNumber={1} stepTitle="Upload Footage" />
                 <ProgressBar progress={33} />
+                <input
+                  type="file"
+                  accept="video/*"
+                  onChange={handleFileChange}
+                  style={{ display: 'none' }}
+                  ref={fileInputRef}
+                />
                 <div
                   className="border-dashed border-2 border-[#393328] rounded-lg p-4 mt-4 text-center text-white cursor-pointer"
                   onDragOver={handleDragOver}
                   onDrop={handleDrop}
+                  onClick={() => fileInputRef.current?.click()}
                 >
                   Drag & drop your videos here
                 </div>

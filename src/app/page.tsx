@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { useState, useEffect } from 'react';
 import { useTheme } from 'next-themes';
 import Image from 'next/image';
+import FadeInOut from './components/animations/FadeInOut';
 
 export default function Home() {
   const [mounted, setMounted] = useState(false);
@@ -251,8 +252,10 @@ export default function Home() {
                   className="rounded-lg"
                 />
               </motion.div>
-              <h5 className="font-syne font-semibold text-3xl mt-4" style={{ fontWeight: 600, fontSize: '20px' }}>01. Upload b-roll.</h5>
-              <p className="text-lg mt-2 text-gray-400" style={{ fontFamily: 'DM Sans', fontWeight: 500, fontSize: '20px', lineHeight: '160%', marginTop: '20px' }}>Upload video snippets from b-roll footage or past content.</p>
+              <FadeInOut>
+                <h5 className="font-syne font-semibold text-3xl mt-4" style={{ fontWeight: 600, fontSize: '20px' }}>01. Upload b-roll.</h5>
+                <p className="text-lg mt-2 text-gray-400" style={{ fontFamily: 'DM Sans', fontWeight: 500, fontSize: '20px', lineHeight: '160%', marginTop: '20px' }}>Upload video snippets from b-roll footage or past content.</p>
+              </FadeInOut>
             </motion.div>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -273,8 +276,10 @@ export default function Home() {
                   className="rounded-lg"
                 />
               </motion.div>
-              <h5 className="font-syne font-semibold text-3xl mt-4" style={{ fontWeight: 600, fontSize: '20px' }}>02. Find your brand story.</h5>
-              <p className="text-lg mt-2 text-gray-400" style={{ fontFamily: 'DM Sans', fontWeight: 500, fontSize: '20px', lineHeight: '160%', marginTop: '20px' }}>Get suggested video narratives and captioning based on your brand&apos;s content and engagement trends.</p>
+              <FadeInOut>
+                <h5 className="font-syne font-semibold text-3xl mt-4" style={{ fontWeight: 600, fontSize: '20px' }}>02. Find your brand story.</h5>
+                <p className="text-lg mt-2 text-gray-400" style={{ fontFamily: 'DM Sans', fontWeight: 500, fontSize: '20px', lineHeight: '160%', marginTop: '20px' }}>Get suggested video narratives and captioning based on your brand&apos;s content and engagement trends.</p>
+              </FadeInOut>
             </motion.div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 mt-8">
@@ -297,8 +302,10 @@ export default function Home() {
                   className="rounded-lg"
                 />
               </motion.div>
-              <h5 className="font-syne font-semibold text-3xl mt-4" style={{ fontWeight: 600, fontSize: '20px' }}>03. Cut, order, caption.</h5>
-              <p className="text-lg mt-2 text-gray-400" style={{ fontFamily: 'DM Sans', fontWeight: 500, fontSize: '20px', lineHeight: '160%', marginTop: '20px' }}>We help you create a video sequence and caption, automatically structured for flow.</p>
+              <FadeInOut>
+                <h5 className="font-syne font-semibold text-3xl mt-4" style={{ fontWeight: 600, fontSize: '20px' }}>03. Cut, order, caption.</h5>
+                <p className="text-lg mt-2 text-gray-400" style={{ fontFamily: 'DM Sans', fontWeight: 500, fontSize: '20px', lineHeight: '160%', marginTop: '20px' }}>We help you create a video sequence and caption, automatically structured for flow.</p>
+              </FadeInOut>
             </motion.div>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -319,8 +326,10 @@ export default function Home() {
                   className="rounded-lg"
                 />
               </motion.div>
-              <h5 className="font-syne font-semibold text-3xl mt-4" style={{ fontWeight: 600, fontSize: '20px' }}>04. Make it shine.</h5>
-              <p className="text-lg mt-2 text-gray-400" style={{ fontFamily: 'DM Sans', fontWeight: 500, fontSize: '20px', lineHeight: '160%', marginTop: '20px' }}>Our AI helps you add styles to match reference videos, or your own brand style.</p>
+              <FadeInOut>
+                <h5 className="font-syne font-semibold text-3xl mt-4" style={{ fontWeight: 600, fontSize: '20px' }}>04. Make it shine.</h5>
+                <p className="text-lg mt-2 text-gray-400" style={{ fontFamily: 'DM Sans', fontWeight: 500, fontSize: '20px', lineHeight: '160%', marginTop: '20px' }}>Our AI helps you add styles to match reference videos, or your own brand style.</p>
+              </FadeInOut>
             </motion.div>
           </div>
         </div>
