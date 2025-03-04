@@ -15,16 +15,17 @@ const UploadFootage: React.FC = () => {
 
   const handleContinue = async () => {
 
-    console.log("uploading!:", uploadedFiles);
-    if (uploadedFiles.length === 0) return;
+    router.push('/create-video');
+    // console.log("uploading!:", uploadedFiles);
+    // if (uploadedFiles.length === 0) return;
 
-    try {
-      const result = await uploadVideos(uploadedFiles); // Call the function
-      console.log('Upload success:', result);
-      router.push('/create-video'); // Navigate to the next page after successful upload
-    } catch (error) {
-      console.error('Upload error:', error);
-    }
+    // try {
+    //   const result = await uploadVideos(uploadedFiles); // Call the function
+    //   console.log('Upload success:', result);
+    //   router.push('/create-video'); // Navigate to the next page after successful upload
+    // } catch (error) {
+    //   console.error('Upload error:', error);
+    // }
   };
 
   const handleRemoveVideo = (index: number) => {

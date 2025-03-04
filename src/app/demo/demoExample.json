@@ -1,0 +1,43 @@
+{
+  "title": "An exciting day out",
+  "description": "",
+  "insight": "Other users like yours use a storytelling vlog structure, where 70% follow a dynamic rise-and-fall cadence—balancing high-energy action with reflective or intimate moments. ",
+  "clips": [
+    {
+      "image": "/demo/1.jpg",
+      "title": "A feast made sharing.",
+      "duration": "0:00 - 0:02",
+      "description": "Tender cuts of meat and vibrant veggies on top of a bed of fluffy rice."
+    },
+    {
+      "image": "/demo/2.jpg",
+      "title": "Buckle up",
+      "duration": "0:02 - 0:04",
+      "description": "Friends in a car, endless adventure."
+    },
+    {
+      "image": "/demo/3.jpg",
+      "title": "A perfect coconut",
+      "duration": "0:04 - 0:06",
+      "description": "Fresh from the tree, handed over."
+    },
+    {
+      "image": "/demo/4.jpg",
+      "title": "Out on the open water",
+      "duration": "0:06 - 0:08",
+      "description": "The boat sets sail."
+    },
+    {
+      "image": "/demo/5.jpg",
+      "title": "Ticklish toes",
+      "duration": "0:08 - 0:10",
+      "description": "Laughter as fish swarm feet."
+    },
+    {
+      "image": "/demo/6.jpg",
+      "title": "Snowstorm in the city",
+      "duration": "0:10 - 0:12",
+      "description": "Fake snow piles up beside twinkling Christmas trees."
+    }
+  ]
+}
