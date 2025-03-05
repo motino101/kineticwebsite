@@ -1,0 +1,92 @@
+{
+  "audios": [
+    {
+      "id": 0,
+      "title": "Original audio - mariona.roma",
+      "reels": "11.7K reels",
+      "platform": "TikTok",
+      "url": "/demo/audios/0.mp3",
+      "img_url": "/demo/audioimages/0.png"
+    },
+    {
+      "id": 1,
+      "title": "Super Bowl LIX Halftime Show (Live)",
+      "reels": "153K reels",
+      "platform": "Instagram",
+      "url": "/demo/audios/1.mp3",
+      "img_url": "/demo/audioimages/1.png"
+    },
+    {
+      "id": 2,
+      "title": "Soulful Strut",
+      "reels": "213K reels",
+      "platform": "TikTok",
+      "url": "/demo/audios/2.mp3",
+      "img_url": "/demo/audioimages/2.png"
+    },
+    {
+      "id": 3,
+      "title": "rumination",
+      "reels": "314K reels",
+      "platform": "Instagram",
+      "url": "/demo/audios/3.mp3",
+      "img_url": "/demo/audioimages/3.png"
+    },
+    {
+      "id": 4,
+      "title": "Let's Vibe",
+      "reels": "60.4K reels",
+      "platform": "TikTok",
+      "url": "/demo/audios/4.mp3",
+      "img_url": "/demo/audioimages/4.png"
+    },
+    {
+      "id": 5,
+      "title": "No More Rain (In This Cloud)",
+      "reels": "8,821 reels",
+      "platform": "TikTok",
+      "url": "/demo/audios/5.mp3",
+      "img_url": "/demo/audioimages/5.png"  
+    },
+    {
+      "id": 6,
+      "title": "Found",
+      "reels": "29.7K reels",
+      "platform": "TikTok",
+      "url": "/demo/audios/6.mp3",
+      "img_url": "/demo/audioimages/6.png"
+    },
+    {
+      "id": 7,
+      "title": "The Way",
+      "reels": "1,000K reels",
+      "platform": "TikTok",
+      "url": "/demo/audios/6.mp3",
+      "img_url": "/demo/audioimages/6.png"
+    },
+    {
+      "id": 8,
+      "title": "Ready or Not",
+      "reels": "7,655 reels",
+      "platform": "TikTok",
+      "url": "/demo/audios/8.mp3",
+      "img_url": "/demo/audioimages/8.png"
+    },
+    {
+      "id": 9,
+      "title": "BIRDS OF A FEATHER",
+      "reels": "2.3M reels",
+      "platform": "TikTok",
+      "url": "/demo/audios/9.mp3",
+      "img_url": "/demo/audioimages/9.png"
+    },
+    {
+      "id": 10,
+      "title": "The Latter Teens",
+      "reels": "121K reels",
+      "platform": "TikTok",
+      "url": "/demo/audios/10.mp3",
+      "img_url": "/demo/audioimages/10.png"
+    }
+  ]
+}
