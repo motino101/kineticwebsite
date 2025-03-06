@@ -7,7 +7,7 @@ import Header from '../components/Header';
 import { FaSpinner } from 'react-icons/fa';
 import demoData from '../demo/demoExample.json';
 import { DndContext, closestCenter } from '@dnd-kit/core';
-import { arrayMove, SortableContext, useSortable } from '@dnd-kit/sortable';
+import { arrayMove, SortableContext, useSortable, verticalListSortingStrategy } from '@dnd-kit/sortable';
 import { CSS } from '@dnd-kit/utilities';
 
 interface ClipProps {
@@ -96,7 +96,7 @@ const CreateVideo = () => {
                       </svg>
                     </div>
                     <div>
-                      <h4 className="b-roll-text">B roll</h4>
+                      {/* <h4 className="b-roll-text">B roll</h4> */}
                       <p className="b-roll-description">
                         {demoData.insight}
                       </p>
@@ -105,7 +105,7 @@ const CreateVideo = () => {
                 </div>
                 <h3 className="section-title px-4 pb-2 pt-4">Suggested Clip Order</h3>
                 <DndContext collisionDetection={closestCenter} onDragEnd={handleDragEnd}>
-                  <SortableContext items={clips.map((clip) => clip.title)}>
+                  <SortableContext items={clips.map((clip) => clip.title)} strategy={verticalListSortingStrategy}>
                     {clips.map((clip, index) => (
                       <SortableClip key={clip.title} clip={clip} index={index} />
                     ))}
@@ -134,8 +134,14 @@ const SortableClip = ({ clip, index }) => {
   });
 
   const style = {
-    transform: CSS.Transform.toString(transform),
+    transform: transform ? CSS.Transform.toString({
+      ...transform,
+      x: 0, // Restrict horizontal movement
+    }) : undefined, // Reset transform when not dragging
     transition,
+    touchAction: 'none',
+    cursor: 'grab',
+    width: '100%',
   };
 
   return (
