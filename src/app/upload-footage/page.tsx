@@ -45,6 +45,8 @@ const UploadFootage: React.FC = () => {
         console.log("Updated uploadedFiles:", newFiles); // Log the updated state
         return newFiles;
       });
+      const fileNames = files.map(file => file.name);
+      setUploadedVideos(prevVideos => [...prevVideos, ...fileNames]);
     }
   }, []);
 
