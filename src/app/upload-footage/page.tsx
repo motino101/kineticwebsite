@@ -75,6 +75,7 @@ const UploadFootage: React.FC = () => {
                 <input
                   type="file"
                   accept="video/*"
+                  multiple
                   onChange={handleFileChange}
                   style={{ display: 'none' }}
                   ref={fileInputRef}

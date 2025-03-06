@@ -29,7 +29,8 @@ const VideoShowcase = () => {
       <div className="min-h-screen flex items-center justify-center">
         <div className="layout-content-container flex flex-col w-[512px] max-w-[512px] py-5 max-w-[960px] flex-1 items-center justify-center">
           <FaCheckCircle className="text-white text-5xl mb-4" />
-          <CreateVideoTitle title="Your video is ready!" />
+          {/* <CreateVideoTitle title="Your video is ready!" /> */}
+          <h1 className="text-3xl font-bold" style={{ fontFamily: 'Space Grotesk' }}>Your video is ready!</h1>
           <div className="flex justify-center mt-4 w-full">
             {/* <button
               onClick={handleContinue}

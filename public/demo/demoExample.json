@@ -1,0 +1,49 @@
+{
+  "title": "An exciting day out",
+  "description": "",
+  "insight": "Other users like yours use a storytelling vlog structure, where 70% follow a dynamic rise-and-fall cadence—balancing high-energy action with reflective or intimate moments. ",
+  "clips": [
+    {
+      "image": "/demo/1.jpg",
+      "title": "A feast made sharing.",
+      "duration": "0:00 - 0:02",
+      "description": "Tender cuts of meat and vibrant veggies on top of a bed of fluffy rice.",
+      "caption": "POV: you're living your best life in Vietnam! 🇻🇳✨"
+    },
+    {
+      "image": "/demo/2.jpg",
+      "title": "Buckle up",
+      "duration": "0:02 - 0:04",
+      "description": "Friends in a car, endless adventure.",
+      "caption": "Any guesses where we’re heading first? ✈️"
+    },
+    {
+      "image": "/demo/3.jpg",
+      "title": "A perfect coconut",
+      "duration": "0:04 - 0:06",
+      "description": "Fresh from the tree, handed over.",
+      "caption": "Vinh Long is a coconut lover’s paradise! 🌴🥥"
+    },
+    {
+      "image": "/demo/4.jpg",
+      "title": "Journey begins",
+      "duration": "0:06 - 0:08",
+      "description": "The boat sets sail.",
+      "caption": "Next stop: Can Tho—where fishing is a way of life! 🎣🏡"
+    },
+    {
+      "image": "/demo/5.jpg",
+      "title": "Coconut paradise",
+      "duration": "0:08 - 0:10",
+      "description": "Laughter as fish swarm feet.",
+      "caption": "Our toes got a surprise… so many fish! 🐟"
+    },
+    {
+      "image": "/demo/6.jpg",
+      "title": "Fishing life",
+      "duration": "0:10 - 0:12",
+      "description": "Fake snow piles up beside twinkling Christmas trees.",
+      "caption": "Wrapped up the day with a joyful family celebration! 🎉"
+    }
+  ]
+}
