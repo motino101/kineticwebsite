@@ -1,49 +1,69 @@
 {
   "title": "An exciting day out",
-  "description": "",
-  "insight": "Other users like yours use a storytelling vlog structure, where 70% follow a dynamic rise-and-fall cadence—balancing high-energy action with reflective or intimate moments. ",
+  "description": "Your video captures a delightful journey through culinary and adventurous experiences, highlighting the essence of joy, camaraderie, and cultural richness.\n\nThe footage beautifully blends the cooking of traditional bitter melon soup and a savory rice dish, emphasizing the use of fresh ingredients and authentic flavors. This culinary exploration is complemented by a joyful river adventure aboard a vibrant pink boat.\n\nThe overall arc moves from culinary exploration → joyous adventures → shared experiences, utilizing a setup of cultural immersion, a conflict of navigating new experiences, and a resolution of shared joy and reflection.",
+  "insight": "Other users like yours use a storytelling vlog structure, where 70% follow a dynamic rise-and-fall cadence—balancing high-energy action with reflective or intimate moments.",
+  "options": [
+    {
+      "title": "📚  Educational Travel Experience",
+      "description": "A storytelling-driven video that blends cuisine, history, and local travel insights.",
+      "recommended": "",
+      "cliporder": [3, 1, 2, 6, 5, 4]
+    },
+    {
+      "title": "🎥  Adventurous Vlog",
+      "description": "A fun vlog highlighting moments of food, adventure, and laughter.",
+      "recommended": "🔥 85% of travelers watch vlogs for trip ideas.",
+      "cliporder": [1, 2, 3, 4, 5, 6]
+    }
+  ],
   "clips": [
     {
       "image": "/demo/1.jpg",
-      "title": "A feast made sharing.",
+      "title": "A Feast to Remember",
       "duration": "0:00 - 0:02",
-      "description": "Tender cuts of meat and vibrant veggies on top of a bed of fluffy rice.",
-      "caption": "POV: you're living your best life in Vietnam! 🇻🇳✨"
+      "summary": "This video captures the art of preparing a delicious meal, featuring tender cuts of meat and fresh vegetables atop a steaming bed of fluffy rice, highlighting rich flavors and shared moments.",
+      "option1": "Vietnam is home to a variety of culinary techniques.",
+      "option2": "POV: you're living your best life in Vietnam! "
     },
     {
       "image": "/demo/2.jpg",
-      "title": "Buckle up",
+      "title": "Adventure Awaits",
       "duration": "0:02 - 0:04",
-      "description": "Friends in a car, endless adventure.",
-      "caption": "Any guesses where we’re heading first? ✈️"
+      "summary": "This video showcases a carefree road trip with friends, filled with laughter, excitement, and the promise of endless adventure on the open road.",
+      "option1": "We're on our way to some must-visit destinations in Vietnam.",
+      "option2": "Any guesses where we’re heading first? "
     },
     {
       "image": "/demo/3.jpg",
-      "title": "A perfect coconut",
+      "title": "Nature’s Gift",
       "duration": "0:04 - 0:06",
-      "description": "Fresh from the tree, handed over.",
-      "caption": "Vinh Long is a coconut lover’s paradise! 🌴🥥"
+      "summary": "This video highlights the moment of enjoying a freshly picked coconut, straight from the tree, celebrating the simplicity and freshness of tropical flavors.",
+      "option1": "Coconut farming is incredibly important in Vietnam, supporting local communities.",
+      "option2": "Vinh Long is a coconut lover’s paradise! "
     },
     {
       "image": "/demo/4.jpg",
-      "title": "Journey begins",
+      "title": "Setting Sail",
       "duration": "0:06 - 0:08",
-      "description": "The boat sets sail.",
-      "caption": "Next stop: Can Tho—where fishing is a way of life! 🎣🏡"
+      "summary": "This video follows a peaceful river journey as a boat drifts off, carrying friends and family into an adventure filled with laughter, scenic views, and unforgettable memories.",
+      "option1": "River travel in Vietnamese culture is important for trade and transportation.",
+      "option2": "Next stop: Can Tho—where fishing is a way of life! "
     },
     {
       "image": "/demo/5.jpg",
-      "title": "Coconut paradise",
+      "title": "Tropical Delight",
       "duration": "0:08 - 0:10",
-      "description": "Laughter as fish swarm feet.",
-      "caption": "Our toes got a surprise… so many fish! 🐟"
+      "summary": "This video captures a playful moment as laughter echoes over the water, feet dangling while fish swarm below, creating an experience of pure joy and connection with nature.",
+      "option1": "Investigate the unique ecosystem of the Mekong Delta.",
+      "option2": "Our toes got a surprise… so many fish! "
     },
     {
       "image": "/demo/6.jpg",
-      "title": "Fishing life",
+      "title": "A Fisherman’s Moment",
       "duration": "0:10 - 0:12",
-      "description": "Fake snow piles up beside twinkling Christmas trees.",
-      "caption": "Wrapped up the day with a joyful celebration! 🎉"
+      "summary": "This video blends holiday magic with the unexpected, as artificial snow piles up beside twinkling Christmas lights, creating a surreal winter scene.",
+      "option1": "Christmas celebrations in Vietnam are still observed in a predominantly non-Christian country.",
+      "option2": "Wrapped up the day with a joyful celebration! "
     }
   ]
 }

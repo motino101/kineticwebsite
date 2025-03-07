@@ -73,7 +73,7 @@ const UploadFootage: React.FC = () => {
             <CreateVideoTitle title="Create Video" />
               <div className="flex flex-col gap-3 p-4">
                 <StepIndicator stepNumber={1} stepTitle="Upload Footage" />
-                <ProgressBar progress={33} />
+                <ProgressBar progress={25} />
                 <input
                   type="file"
                   accept="video/*"
@@ -110,8 +110,9 @@ const UploadFootage: React.FC = () => {
               </div>
               <div className="flex justify-center mt-10">
                 <button
-                  onClick={handleContinue} 
-                  className="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-4 bg-[#edaf34] text-[#181611] text-sm font-bold leading-normal tracking-[0.015em] w-full"
+                  onClick={() => router.push('/confirm-video')}
+                  disabled={uploadedFiles.length === 0}
+                  className={`flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-4 text-sm font-bold leading-normal tracking-[0.015em] w-full ${uploadedFiles.length > 0 ? 'bg-[#edaf34] text-[#181611]' : 'bg-[#393328] text-[#b9b09d] cursor-not-allowed'}`}
                 >
                   Continue
                 </button>

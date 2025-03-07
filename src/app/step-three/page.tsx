@@ -77,8 +77,8 @@ const StepThree = () => {
             <div className="layout-content-container flex flex-col w-[512px] max-w-[512px] py-5 max-w-[960px] flex-1">
             <CreateVideoTitle title="Create Video" />
               <div className="flex flex-col gap-3 p-4">
-                <StepIndicator stepNumber={3} stepTitle="Select music" />
-                <ProgressBar progress={75} />
+                <StepIndicator stepNumber={4} stepTitle="Select music" />
+                <ProgressBar progress={100} />
               </div>
               <div className="flex  w-full p-4 ">
             
@@ -161,8 +161,9 @@ const StepThree = () => {
           
               <div className="flex justify-center mt-10">
                 <button
-                  onClick={handleContinue} 
-                  className="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-4 bg-[#edaf34] text-[#181611] text-sm font-bold leading-normal tracking-[0.015em] w-full"
+                  onClick={handleContinue}
+                  disabled={!selectedAudioId}
+                  className={`flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-4 text-sm font-bold leading-normal tracking-[0.015em] w-full ${selectedAudioId ? 'bg-[#edaf34] text-[#181611]' : 'bg-[#393328] text-[#b9b09d] cursor-not-allowed'}`}
                 >
                   Continue
                 </button>
